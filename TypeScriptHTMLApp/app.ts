@@ -19,9 +19,13 @@
         clearTimeout(this.timerToken);
     }
 
+    protected changeTimer() {
+        console.log("protected function")
+    }
 }
 
 window.onload = () => {
+    var tuple: [number, string] = [1, "string"];
     var el = document.getElementById('content');
     var greeter = new Greeter(el);
     greeter.start();
